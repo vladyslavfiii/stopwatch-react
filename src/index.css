@@ -5,9 +5,153 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background: #0e1111;
+
+  display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+
+  margin:  0px;
+	padding: 0px;
+
+  font-size: 16px;
+
+  overflow: hidden;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.preloader{
+  position: fixed;
+  background: none repeat scroll 0 0 	#0e1111;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  animation:  preloaderAnimation 3.5s;
+}
+
+@keyframes preloaderAnimation {
+  0%{
+    opacity: 1;
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+  }
+}
+.preloaderInner{
+  background-image: url("preloader.png");
+  background-size: 10rem 10rem;
+  height: 10rem;
+  width: 10rem;
+
+  opacity: 0;
+  animation: preloaderInnerAnimation 2s;
+}
+
+@keyframes preloaderInnerAnimation {
+  0%{
+    opacity: 1;
+  }
+  50%{
+      opacity: 1;
+  }
+  100%{
+      opacity: 0;
+  }
+}
+/* === */
+.stopwatchContainer{
+	width: 100%;
+  height: 50rem;
+
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center ;
+}
+
+.stopwatch{
+	width: 25rem;
+	height: 25rem;
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	border: 0.25rem solid white;
+  border-radius: 50%;
+	background: #303030;
+}
+.time{
+	width: 20rem;
+	height: 5rem;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+	font-family: Consolas;
+  font-size: 2.5rem;
+	color:  white;
+	text-align: center;
+
+  font-size: 4rem;
+	background: none;
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+.stopwatchButtonsContainer{
+	width: 25rem;
+	height: 4rem;
+
+ 	display: flex;
+ 	flex-direction: row;
+ 	justify-content: space-around;
+ 	align-items: center;
+
+ 	font-family:Consolas;
+
+  border: 0.25rem solid white;
+  border-radius: 5rem;
+	background: #303030;
+
+	margin-top: 1rem;
+}
+.stopwatchButtons{
+  width: 10rem;
+
+	font-family: Consolas;
+  font-size: 2.5rem;
+
+  background: white;
+  border: 0;
+  border-radius: 5rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  align-items: center;
+
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
 }
